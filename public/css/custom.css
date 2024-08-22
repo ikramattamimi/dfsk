@@ -1,0 +1,62 @@
+.contact-buttons .col {
+    height: 65px;
+}
+
+.dfsk-icon, .siloam-icon, .seres-icon {
+    height: 70px;
+}
+
+.dfsk-icon {
+    padding: 1rem
+}
+
+.siloam-icon {
+    padding: .25rem
+}
+
+.bg-custom {
+    background-color: grey;
+}
+
+@media (max-width: 790px) {
+    .contact-buttons {
+        z-index: 98;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        box-shadow: inset 0px 4px 14px -7px #404040;
+        text-align: center;
+    }
+
+    .back-to-top {
+        right: 15px;
+        bottom: 85px;
+    }
+
+    .dfsk-icon {
+        height: 60px;
+    }
+    .siloam-icon, .seres-icon {
+        height: 40px;
+    }
+}
+
+@media (min-width: 791px) {
+    .contact-buttons {
+        display: none;
+    }
+}
+
+.type-image {
+    max-height: 300px !important;
+    height: 300px !important;
+    width: auto !important;
+}
+
+.product-image {
+    max-height: 200px !important;
+    height: 200px !important;
+    width: auto !important;
+}
+
