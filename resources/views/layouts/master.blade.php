@@ -96,32 +96,19 @@
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
+                @php
+                    $siteUrl = config('app.url');
+                @endphp
                 <div class="navbar-nav ms-auto py-0">
-                    <a class="nav-item nav-link active" href="{{ url('/') }}">Home</a>
-                    <a class="nav-item nav-link" href="#harga">Harga</a>
-                    <a class="nav-item nav-link" href="#">Promo</a>
-                    <a class="nav-item nav-link" href="#">Test Drive</a>
-                    {{-- <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Promo</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Brosur</a>
-                            <a href="detail.html" class="dropdown-item">Test Drive</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                            <a href="feature.html" class="dropdown-item">Our features</a>
-                            <a href="team.html" class="dropdown-item">Team Members</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a> --}}
-                </div>
-                {{-- <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a> --}}
+                    <a class="nav-item nav-link" href="{{ url()->current() === url('/') ? '#' : url('/') }}" data-target="home">Home</a>
+                    {{-- <a class="nav-item nav-link {{ url()->current() === url('harga') ? 'active' : '' }}" href="{{ url()->current() === url('/') ? '#harga' : url('harga') }}" data-target="harga">Harga</a>
+                    <a class="nav-item nav-link {{ url()->current() === url('testdrive') ? 'active' : '' }}" href="{{ url()->current() === url('/') ? '#testdrive' : url('testdrive') }}" data-target="testdrive">Test Drive</a>
+                    <a class="nav-item nav-link {{ url()->current() === url('promo') ? 'active' : '' }}" href="{{ url()->current() === url('/') ? '#promo' : url('promo') }}" data-target="promo">Promo</a> --}}
+
+                    <a class="nav-item nav-link {{ url()->current() === url('harga') ? 'active' : '' }}" href="{{ url('harga') }}" data-target="harga">Harga</a>
+                    <a class="nav-item nav-link {{ url()->current() === url('testdrive') ? 'active' : '' }}" href="{{ url('testdrive') }}" data-target="testdrive">Test Drive</a>
+                    <a class="nav-item nav-link {{ url()->current() === url('promo') ? 'active' : '' }}" href="{{ url('promo') }}" data-target="promo">Promo</a>
+
             </div>
         </nav>
     </div>
@@ -133,11 +120,11 @@
     <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="row gx-5">
-                <div class="col-lg-8 col-md-6">
+                <div class="col-12">
                     <div class="row gx-5">
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Get In Touch</h3>
+                                <h3 class="text-light mb-0">Contact Us</h3>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
@@ -156,6 +143,24 @@
                                 <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Factory</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Jl. Raya Industri Modern Cikande Kav. 30C Desa Barengkok, Serang, Banten 42186, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                                <h3 class="text-light mb-0">Head Office</h3>
+                            </div>
+                            <div class="d-flex mb-2">
+                                <i class="bi bi-geo-alt text-primary me-2"></i>
+                                <p class="mb-0">Jl. Sultan Iskandar Muda No.81 Kebayoran Lama, Jakarta Selatan 12240, Indonesia</p>
                             </div>
                         </div>
                     </div>
@@ -182,7 +187,7 @@
 
     <!-- Whatsapp Icon -->
     <div class="whatsapp-container">
-        <span class="whatsapp-text">Hubungi saya di Whatsapp</span>
+        <span class="whatsapp-text">Hubungi Marketing Kami</span>
         <a class="whatsapp-icon" href="https://wa.me/+6289647918986" target="_blank">
             <img src="{{ asset('img/dfsk/whatsapp_icon.png') }}" alt="whatsapp" width="60px">
         </a>

@@ -478,16 +478,17 @@ h6,
     right: 45px;
     display: flex;
     align-items: center;
+    z-index: 99;
 }
 
 .whatsapp-icon {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     transition: transform 0.3s ease;
 }
 
 .whatsapp-text {
-    display: none;
+    display: inline-block;
     margin-right: 10px;
     padding: 5px 10px;
     background-color: white;
@@ -496,10 +497,6 @@ h6,
     font-size: 14px;
     color: #000;
     white-space: nowrap;
-}
-
-.whatsapp-container:hover .whatsapp-text {
-    display: inline-block;
 }
 
 .whatsapp-container:hover .whatsapp-icon {
