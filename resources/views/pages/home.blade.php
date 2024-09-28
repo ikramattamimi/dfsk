@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <a href="https://wa.me/+6289647918986" target="_blank">
-                        <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                            <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
                                 <div class="d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
                                     <img src="{{ asset('img/dfsk/whatsapp_icon.png') }}" alt="whatsapp" width="60px">
                                 </div>
@@ -82,6 +82,147 @@
                             <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ asset('img/dfsk/kantor.jpg') }}" style="object-fit: cover;">
                         </div>
                     </div>
+
+                    {{-- Promo --}}
+                    <div class="col-12 col-lg-7">
+                        <div class="nv-content-wrap entry-content">
+                            <h2 class="wp-block-heading"><strong>Promo DFSK Bandung Agustus 202</strong>4</h2>
+                            <p><strong></strong>Promo khusus DFSK di bulan Agustus untuk setiap pembelian cash dan kredit mobil baru DFSK hanya di DFSK Bandung. Dapatkan Harga terbaik di setiap pembelian cash dan kredit mulai dari DP 30 Jutaan unit DFSK Glory 560, Glory 580, Gelora dan supercab.</p>
+                            <ul class="wp-block-list">
+                                <li>
+                                    <strong>GELORA BLIND VAN</strong>
+                                    <br>TDP 30 Juta’an
+                                    <br>Angsuran 4 Juta’an
+                                </li>
+                                <li>
+                                    <strong>GELORA AMBULANCE JENAZAH</strong>
+                                    <br>TDP 40 Juta’an
+                                    <br>Angsuran 5 Juta’an
+                                </li>
+                                <li>
+                                    <strong>GELORA AMBULANCE EKONOMI</strong>
+                                    <br>TDP 40 Juta’an
+                                    <br>Angsuran 4 Juta’an
+                                </li>
+                                <li>
+                                    <strong>SUPER CAB 1.5 L GASOLINE AC</strong>
+                                    <br>TDP 30 Juta’an
+                                    <br>Angsuran 3 Juta’an
+                                </li>
+                                <li>
+                                    <strong>SUPER CAB 1.3L TURBO DIESEL AC</strong>
+                                    <br>TDP 30 Juta’an
+                                    <br>Angsuran 4 Juta’an
+                                </li>
+                            </ul>
+                            <p>Sebelum promo berakhir, segera kunjungi&nbsp;<strong><em>Dealer Mobil DFSK Bandung</em></strong>&nbsp;hubungi&nbsp;<strong>Bejat Sales Executive DFSK</strong>&nbsp;di no&nbsp;<a href="tel:+6289647918986"><strong>089647918986</strong>&nbsp;</a>yang siap membantu Anda.</p>
+                            <ul class="wp-block-list">
+                                <li><em>Promo DFSK Bandung Spesial Kemerdekaan Agustus 2024</em></li>
+                                <li><em>Promo khusus area Bandung dan sekitarnya</em></li>
+                                <li><em>Syarat dan ketentuan berlaku</em></li>
+                            </ul>
+                            <p>Informasi lebih lengkapnya, silahkan hubungi :</p>
+                            <a href="https://wa.me/+6289647918986" target="_blank">
+                                <div class="d-flex align-items-center mb-4 wow fadeIn" data-wow-delay="0.6s">
+                                    <div class="d-flex align-items-center justify-content-center rounded" style="width: 60px; height: 60px;">
+                                        <img src="{{ asset('img/dfsk/whatsapp_icon.png') }}" alt="whatsapp" width="60px">
+                                    </div>
+                                    <div class="ps-4">
+                                        <h5 class="mb-2">Bejat</h5>
+                                        <h4 class="text-primary mb-0">089647918986</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    {{-- End Promo --}}
+
+                    {{-- Kalkulator --}}
+                    <div class="col-12 col-lg-5">
+                        <h2>Kalkulator Kredit DFSK</h2>
+                        <div class="card bg-light p-3">
+                            <div class="row mb-3">
+                                <div class="col-3 col-form-label">
+                                    <label for="model">Model :</label>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select" id="model" name="model" aria-required="true" required="required" onchange="ftipe(this)">
+                                        <option value="Pilih Model">Pilih Model</option>
+                                        <option value="Glory I-Auto">Glory I-Auto</option>
+                                        <option value="Glory 580">Glory 580</option>
+                                        <option value="Gelora">Gelora</option>
+                                        <option value="Glory 560">Glory 560</option>
+                                        <option value="Super Cab">Super Cab</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-3 col-form-label">
+                                    <label for="tipe">Tipe :</label>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select" id="tipe" name="tipe" aria-required="true" required="required" onchange="fharga(this)"></select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-3 col-form-label">
+                                    <label for="harga">Harga :</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control" id="harga" name="harga" value="" aria-required="true" aria-invalid="false" readonly="readonly" required="required">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-3 col-form-label">
+                                    <label for="tdpin">Total DP :</label>
+                                </div>
+                                <div class="col">
+                                    <input class="form-control" id="tdpin" name="tdpin" type="tel" value="" aria-required="true" aria-invalid="false" style="text-align: right;" onkeyup="convertToRupiah(this);" required="required">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-3 col-form-label">
+                                    <label for="tenor">Tenor :</label>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select" id="tenor" name="tenor" aria-required="true" required="required" onchange="ftenor(this)">
+                                        <option value="Pilih">Pilih</option>
+                                        <option value="06">6 Bulan</option>
+                                        <option value="1">1 Tahun</option>
+                                        <option value="2">2 Tahun</option>
+                                        <option value="3">3 Tahun</option>
+                                        <option value="4">4 Tahun</option>
+                                        <option value="5">5 Tahun</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-3 col-form-label">
+                                    <label for="asur">Asuransi :</label>
+                                </div>
+                                <div class="col">
+                                    <select class="form-select" id="asur" name="asur" aria-required="true" required="required" onchange="asurt(this)">
+                                        <option value="allr">BCAF</option>
+                                        <option value="komb">Maybank</option>
+                                        <option value="tlo">MTF</option>
+                                        <option value="komb">CIMB</option>
+                                        <option value="tlo">MUF</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-3 col-form-label">
+                                    <input class="btn btn-primary" id="tblcalc" name="tblcalc" type="button" value="Kalkulasi" onclick="getcalc()" readonly="readonly">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col">
+                                    <div id="kalkulasi"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- End Kalkulator --}}
                 </div>
             </div>
         </div>
@@ -89,7 +230,7 @@
     </section>
     <!-- Carousel End -->
 
-    <section id="harga">
+    <section id="type">
         @include('components.type')
     </section>
 
@@ -100,9 +241,9 @@
     <!-- Test Drive End -->
 
     <!-- Blog Start -->
-    <section id="promo">
+    {{-- <section id="promo">
         @include('components.promo')
-    </section>
+    </section> --}}
     <!-- Blog Start -->
 @endsection
 
@@ -193,5 +334,91 @@
         });
     </script>
 
+    {{-- Kalkulator --}}
+    <script>
+        // Sample prices for each model and type
+        const prices = {
+            "Glory I-Auto": {
+                "type1": 250000000,
+                "type2": 270000000,
+            },
+            "Glory 580": {
+                "type1": 300000000,
+                "type2": 320000000,
+            },
+            "Gelora": {
+                "type1": 150000000,
+            },
+            "Glory 560": {
+                "type1": 260000000,
+            },
+            "Super Cab": {
+                "type1": 200000000,
+            }
+        };
+
+        // Update type options based on selected model
+        function ftipe(selectElement) {
+            const model = selectElement.value;
+            const tipeSelect = document.getElementById('tipe');
+
+            tipeSelect.innerHTML = ''; // Clear previous options
+
+            if (prices[model]) {
+                Object.keys(prices[model]).forEach((type) => {
+                    const option = document.createElement('option');
+                    option.value = type;
+                    option.textContent = type;
+                    tipeSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Update price based on selected type
+        function fharga(selectElement) {
+            const model = document.getElementById('model').value;
+            const tipe = selectElement.value;
+            const hargaInput = document.getElementById('harga');
+
+            if (prices[model] && prices[model][tipe]) {
+                hargaInput.value = prices[model][tipe];
+            } else {
+                hargaInput.value = '';
+            }
+        }
+
+        // Convert input value to Rupiah format
+        function convertToRupiah(input) {
+            let value = input.value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
+            input.value = value.replace(/\B(?=(\d{3})+(?!\d))/g, "."); // Add dots for thousands
+        }
+
+        // Calculate the monthly installment and display the result
+        function getcalc() {
+            const harga = parseInt(document.getElementById('harga').value);
+            const totalDP = parseInt(document.getElementById('tdpin').value.replace(/\./g, '')); // Remove dots
+            const tenor = parseInt(document.getElementById('tenor').value);
+
+            if (!harga || !totalDP || !tenor) {
+                alert("Silakan lengkapi semua informasi.");
+                return;
+            }
+
+            const sisaPinjaman = harga - totalDP;
+            const bunga = 0.05; // Example interest rate of 5%
+            const monthlyInstallment = (sisaPinjaman * (1 + bunga * tenor)) / (tenor * 12);
+
+            document.getElementById('kalkulasi').innerHTML = `Angsuran per bulan: Rp ${monthlyInstallment.toLocaleString('id-ID')}`;
+        }
+
+        // Update the calculation based on selected tenor (optional)
+        function ftenor(selectElement) {
+            // Additional functionality can be added here if needed
+        }
+
+        // Update the insurance selection (optional)
+        function asurt(selectElement) {
+            // Additional functionality can be added here if needed
+        }
     </script>
 @endsection

@@ -9,6 +9,20 @@
                 <h1 class="mb-0">GELORA ELECTRIC</h1>
             </div>
             <div class="mb-5">
+
+                <div class="row justify-content-center my-4 g-5 border rounded">
+                    <h4 class="text-center">Warna</h4>
+                    <div class="col-md-6 col-lg-3 wow slideInUp" data-wow-delay="0.3s">
+                        <div class="team-item bg-transparent rounded overflow-hidden">
+                            <div class="team-img position-relative overflow-hidden">
+                                <a data-fancybox="warna-gelora-e" href="{{ asset('img/dfsk/gelora-e/warna/1.png') }}">
+                                    <img class="w-100" src="{{ asset('img/dfsk/gelora-e/warna/1.png') }}" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <nav>
                     <div class="nav nav-tabs nav-fill mb-3" id="myTab0" role="tablist">
                         <button class="nav-link active" id="exterior-tab0" data-bs-toggle="tab" data-bs-target="#exterior0" type="button" role="tab" aria-controls="exterior" aria-selected="true">
